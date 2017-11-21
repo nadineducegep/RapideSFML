@@ -17,7 +17,7 @@ protected:
 	int x;
 	int y;
 public:
-	Tuile(bool estRoche);
+	Tuile(int materiel);
 	virtual ~Tuile();
 	void afficher(RenderWindow& fenetre);
 

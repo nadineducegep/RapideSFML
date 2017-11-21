@@ -37,7 +37,7 @@ int main()
         //grille->afficherTuileDansCase(2,2,tuileFleur);
         for(int rangee = 0; rangee < 8; rangee++)
         	for(int colonne = 0; colonne <6; colonne++)
-        		grille->afficherTuileDansCase(rangee,colonne,new Tuile((rangee+colonne)%2));
+        		grille->afficherTuileDansCase(rangee,colonne,new Tuile((rangee+colonne)%4));
 
         fenetre.display();
     }

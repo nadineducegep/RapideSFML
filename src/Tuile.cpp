@@ -8,13 +8,15 @@
 #include "Tuile.h"
 // https://commons.wikimedia.org/wiki/File:Flower_garden_found_in_Tak_Thailand_1.jpg
 // http://maxpixel.freegreatpicture.com/Pebbles-Texture-Pebble-Background-Stones-Plump-1479624
+// https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA20324
+// http://www.publicdomainpictures.net/view-image.php?image=126102&picture=pool-water
 
-Tuile::Tuile(bool estRoche) {
+Tuile::Tuile(int materiel) {
 	std::string fichier;
-	if(estRoche)
-		fichier = "decoration/images/tuile-roche.jpg";
-	else
-		fichier = "decoration/images/tuile-fleur.jpg";
+	if(0 == materiel) fichier = "decoration/images/tuile-fleur.jpg";
+	if(1 == materiel) fichier = "decoration/images/tuile-roche.jpg";
+	if(2 == materiel) fichier = "decoration/images/tuile-terre.jpg";
+	if(3 == materiel) fichier = "decoration/images/tuile-eau.jpg";
 
 	this->texture = new Texture();
 	if(!texture->loadFromFile(fichier))
