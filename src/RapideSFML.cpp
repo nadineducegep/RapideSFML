@@ -9,7 +9,7 @@ int main()
 {
     RenderWindow fenetre(VideoMode(800, 600), "Rapide SFML !");
 
-    Tuile * tuileFleur = new Tuile();
+    Tuile * tuileFleur = new Tuile(true);
 
     while (fenetre.isOpen())
     {

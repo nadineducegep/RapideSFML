@@ -14,6 +14,9 @@ class Grille {
 public:
 	Grille();
 	virtual ~Grille();
+
+
+
 };
 
 } /* namespace vue */

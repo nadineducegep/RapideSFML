@@ -15,7 +15,7 @@ protected:
 	Texture * texture = NULL;
 	Sprite * illustration = NULL;
 public:
-	Tuile();
+	Tuile(bool estRoche);
 	virtual ~Tuile();
 	void afficher(RenderWindow& fenetre);
 };
