@@ -17,7 +17,9 @@ protected:
 	int x;
 	int y;
 public:
-	Tuile(int materiel);
+	enum TYPE_TUILE{TUILE_FLEUR, TUILE_TERRE, TUILE_ROCHE, TUILE_EAU};
+
+	Tuile(Tuile::TYPE_TUILE materiel);
 	virtual ~Tuile();
 	void afficher(RenderWindow& fenetre);
 

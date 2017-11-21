@@ -14,7 +14,7 @@ int main()
 
 
     Grille * grille = new Grille(8,6,&fenetre);
-    Tuile * tuileFleur = new Tuile(true);
+    //Tuile * tuileFleur = new Tuile(2);
 
     while (fenetre.isOpen())
     {
@@ -37,7 +37,11 @@ int main()
         //grille->afficherTuileDansCase(2,2,tuileFleur);
         for(int rangee = 0; rangee < 8; rangee++)
         	for(int colonne = 0; colonne <6; colonne++)
-        		grille->afficherTuileDansCase(rangee,colonne,new Tuile((rangee+colonne)%4));
+        		grille->afficherTuileDansCase(rangee,colonne,new Tuile(Tuile::TYPE_TUILE::TUILE_EAU));
+        grille->afficherTuileDansCase(4,3,new Tuile(Tuile::TYPE_TUILE::TUILE_TERRE));
+        grille->afficherTuileDansCase(5,3,new Tuile(Tuile::TYPE_TUILE::TUILE_TERRE));
+        grille->afficherTuileDansCase(5,4,new Tuile(Tuile::TYPE_TUILE::TUILE_TERRE));
+        grille->afficherTuileDansCase(4,2,new Tuile(Tuile::TYPE_TUILE::TUILE_TERRE));
 
         fenetre.display();
     }
