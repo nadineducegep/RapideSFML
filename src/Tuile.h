@@ -14,10 +14,31 @@ class Tuile {
 protected:
 	Texture * texture = NULL;
 	Sprite * illustration = NULL;
+	int x;
+	int y;
 public:
 	Tuile(bool estRoche);
 	virtual ~Tuile();
 	void afficher(RenderWindow& fenetre);
+
+	int getX() const {
+		return x;
+	}
+
+	void setX(int x) {
+		this->x = x;
+	}
+
+	int getY() const {
+		return y;
+	}
+
+	void setY(int y) {
+		this->y = y;
+	}
+
+	static int LARGEUR;
+	static int HAUTEUR;
 };
 
 #endif /* TUILE_H_ */

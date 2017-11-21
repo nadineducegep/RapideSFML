@@ -20,7 +20,6 @@ Tuile::Tuile(bool estRoche) {
 	if(!texture->loadFromFile(fichier))
 		texture = NULL;
 	illustration = new Sprite(*texture);
-
 }
 
 Tuile::~Tuile() {
@@ -28,6 +27,13 @@ Tuile::~Tuile() {
 
 void Tuile::afficher(RenderWindow& fenetre)
 {
+	this->illustration->setPosition(this->x, this->y);
 	fenetre.draw(*illustration);
 }
+
+//static int
+int Tuile::LARGEUR = 100;
+//static int
+int Tuile::HAUTEUR = 100;
+
 

@@ -7,15 +7,19 @@
 
 #include "Grille.h"
 
-namespace vue {
-
-Grille::Grille() {
-	// TODO Auto-generated constructor stub
-
+Grille::Grille(int colonnes, int rangees, RenderWindow* fenetre)
+{
+	this->colonnes = colonnes;
+	this->rangees = rangees;
+	this->fenetre = fenetre;
 }
 
 Grille::~Grille() {
-	// TODO Auto-generated destructor stub
 }
 
-} /* namespace vue */
+void Grille::afficherTuileDansCase(int colonne, int rangee, Tuile * tuile)
+{
+	tuile->setX(colonne*Tuile::LARGEUR);
+	tuile->setY(rangee*Tuile::HAUTEUR);
+	tuile->afficher(*(this->fenetre));
+}

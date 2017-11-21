@@ -7,18 +7,21 @@
 
 #ifndef GRILLE_H_
 #define GRILLE_H_
-
-namespace vue {
+#include "tuile.h"
 
 class Grille {
+protected:
+	RenderWindow * fenetre;
+	int colonnes;
+	int rangees;
+	int largeur = 800;
+	int hauteur = 600;
 public:
-	Grille();
+	Grille(int colonnes, int rangees, RenderWindow* fenetre);
 	virtual ~Grille();
 
-
+	void afficherTuileDansCase(int colonne, int rangee, Tuile * tuile);
 
 };
-
-} /* namespace vue */
 
 #endif /* GRILLE_H_ */

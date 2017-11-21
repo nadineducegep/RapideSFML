@@ -3,12 +3,17 @@
 #include <iostream>
 #include <vector>
 #include "Tuile.h"
+#include "Grille.h"
+
 using namespace sf;
 using namespace std;
+
 int main()
 {
     RenderWindow fenetre(VideoMode(800, 600), "Rapide SFML !");
 
+
+    Grille * grille = new Grille(8,6,&fenetre);
     Tuile * tuileFleur = new Tuile(true);
 
     while (fenetre.isOpen())
@@ -28,9 +33,8 @@ int main()
             }
         }
         fenetre.clear();
-        //if(scene) fenetre.draw(*scene);
-        tuileFleur->afficher(fenetre);
-
+        //tuileFleur->afficher(fenetre);
+        grille->afficherTuileDansCase(2,2,tuileFleur);
         fenetre.display();
     }
     return 0;
